@@ -2,14 +2,16 @@
   "name": "storefront",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "gulp dev",
+    "server": "gulp server"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.18.5",
+    "gulp": "^3.9.1",
     "gulp-webserver": "^0.9.1"
   }
 }
