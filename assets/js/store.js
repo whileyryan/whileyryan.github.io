@@ -1,13 +1,6 @@
-angular.module('storeFront', ['ui.router'])
+angular.module('storeFront', [])
 .controller('storeFrontCtrl',storeFrontCtrl)
-.controller('ProductCtrl',ProductCtrl)
 .factory('storeFrontService',storeFrontService)
-
-function ProductCtrl(){
-	console.log('here');
-	var vm = this;
-	vm.test = 'ryan';
-}
 
 function storeFrontCtrl($scope, storeFrontService){
 	var vm = this;
@@ -25,7 +18,6 @@ function storeFrontCtrl($scope, storeFrontService){
 	function activate(){
 		storeFrontService.loadData().then(function(response){
 			storeFrontService.products = storeFrontService.prepData(response.data.products);
-			console.log(storeFrontService.products);
 			vm.products = storeFrontService.products;
 		})
 	}
