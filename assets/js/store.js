@@ -74,7 +74,7 @@ function storeFrontService($http){
 
 	// functions
 	function loadData(){
-		return $http.get('http://sneakpeeq-sites.s3.amazonaws.com/interviews/ce/feeds/store.js');
+		return $http.get('https://sneakpeeq-sites.s3.amazonaws.com/interviews/ce/feeds/store.js');
 	}
 
 	function prepData(data){
