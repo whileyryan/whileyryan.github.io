@@ -1,0 +1,28 @@
+body{
+	font-family: Helvetica;
+}
+
+.text-right{
+	float:right;
+}
+
+.text-left{
+	float:left;
+}
+
+.button{
+	cursor: pointer;
+	text-decoration: underline;
+	color:#3366BB;
+}
+
+.cart{
+	border-radius: 8px;
+	border:2px solid #000;
+	padding:5px;
+	margin-right: 5%;
+}
+
+.total{
+	border-top: 2px solid #000;
+}
