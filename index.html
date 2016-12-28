@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>Store Front</title>
   	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
   	<script src="assets/js/store.js"></script>
     <link href="assets/css/main.css" rel="stylesheet">
@@ -16,7 +17,7 @@
           <th></th>
         </tr>
         <tr ng-repeat="product in store.products" width="100%">
-          <td><img ng-src="http:{{product.mainImage.ref}}" width="50px" height="50px"></td>
+          <td><img ng-src="https:{{product.mainImage.ref}}" width="50px" height="50px"></td>
           <td>{{product.name}}</td>
           <td>{{product.price | currency}}</td>
           <td ><span class="button" ng-click="store.addToCart(product)">Add to Cart</span></td>
@@ -30,7 +31,7 @@
         <p>There are no products in your shopping cart right now!</p>
       </div>
       <div ng-repeat="product in store.cart">
-      <img ng-src="http:{{product.image}}" width="50px" height="50px">
+      <img ng-src="https:{{product.image}}" width="50px" height="50px">
       {{product.price | currency}} - {{product.name}}
       <br><label>Quantity:</label> <input type="text" ng-model="product.quantity" ng-change="store.updateTotals();" maxlength="3" size="3">
       <br><label>Wholsale:</label> <input type="checkbox" ng-model="product.wholesale" ng-change="store.updateProductPrice(product)">
